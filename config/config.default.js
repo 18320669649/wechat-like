@@ -36,7 +36,8 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1655478074028_3084';
 
   // add your middleware config here
-  config.middleware = [];
+  // 配置中间件
+  config.middleware = [ 'errorHandler' ];
 
 
   // add your user config here
