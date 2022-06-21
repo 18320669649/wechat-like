@@ -17,4 +17,10 @@ module.exports = {
     enable: true,
     package: 'egg-valparams',
   },
+
+  // sequelize 配置
+  sequelize: {
+    enable: true,
+    package: 'egg-sequelize',
+  },
 };
