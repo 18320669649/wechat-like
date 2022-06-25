@@ -12,7 +12,7 @@ module.exports = (options, app) => {
     } catch (err) {
       // 记录一条日志
       app.emit('error', err, ctx);
-
+      console.log(1222);
       const status = err.status || 500;
       // 生产环境时 500错误的详细错误内容不返回给客户端， 因为可能包含敏感信息
       let error = status === 500 && app.config.env === 'prod' ? 'Internal Server Error' : err.message;

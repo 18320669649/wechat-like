@@ -18,9 +18,21 @@ module.exports = {
     package: 'egg-valparams',
   },
 
+  // jwt 验证
+  jwt: {
+    enable: true,
+    package: 'egg-jwt',
+  },
+
   // sequelize 配置
   sequelize: {
     enable: true,
     package: 'egg-sequelize',
+  },
+
+  // redis 缓存
+  redis: {
+    enable: true,
+    package: 'egg-redis',
   },
 };

@@ -32,6 +32,11 @@ module.exports = appInfo => {
     throwError: true,
   };
 
+  // 加密
+  config.crypto = {
+    secret: 'qhdgw@45ncashdaksh2!#@3nxjdas*_672',
+  };
+
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1655478074028_3084';
 
@@ -39,13 +44,28 @@ module.exports = appInfo => {
   // 配置中间件
   config.middleware = [ 'errorHandler' ];
 
+  // jwt 验证
+  config.jwt = {
+    secret: 'qhdgw@45ncashdaksh2!#@3nxjdas*_672',
+  };
+
+  // redis 缓存
+  config.redis = {
+    client: {
+      port: 6379, // Redis port
+      host: '127.0.0.1', // Redis host
+      password: '',
+      db: 2,
+    },
+  };
+
 
   // 配置sequelize
   config.sequelize = {
     dialect: 'mysql',
     host: '127.0.0.1',
     username: 'root',
-    password: 'root',
+    password: '123456',
     port: 3306,
     database: 'egg-wechat',
     // 中国时区
